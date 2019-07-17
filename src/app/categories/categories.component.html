@@ -1,0 +1,22 @@
+<p>categories !</p>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories" (click) = "getCategory()">
+            <td>{{category.id}}</td>
+            <td>{{category.name}}</td>
+            <td>{{category.description}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<input type="text" [(ngModel)]="id"  placeholder="ID" disabled>
+<input type="text" [(ngModel)]="name"  placeholder="Name">
+<input type="text" [(ngModel)]="description"  placeholder="Description">
+<button (click)= "addCategory()">Add category</button>
+
+
